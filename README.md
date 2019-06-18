@@ -49,7 +49,7 @@ String result = mapper.writeValueAsString(target);
 
 Ex 1. When class has annotated.
 ```java
-@JsonOnly({a, b, c})
+@JsonOnly({"a", "b", "c"})
 Class Test {
     String a = "a";
     String b = "b";
@@ -61,7 +61,7 @@ Result will be : {a:"a",b:"b",c:"c"}
       
 Ex 2. Can target field's field too.
 ```java
-@JsonOnly({a, b, c.a})
+@JsonOnly({"a", "b", "c.a"})
 Class Test2 {
     String a = "a";
     String b = "b";
@@ -72,7 +72,7 @@ Result will be : {a:"a",b:"b",c:{a:"a"}
   
 Ex 3. Fields can be annotated too.
 ```java
-@JsonOnly({a, b})
+@JsonOnly({"a", "b"})
 Class Test2 {
 
     String a = "a";
